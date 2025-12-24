@@ -26,9 +26,13 @@
 }
 #hour,#minutes,#second{
    position: absolute;
-        transform-origin: bottom center;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%);
 
 }
+
 
 
 
