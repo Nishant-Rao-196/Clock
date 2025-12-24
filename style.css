@@ -13,50 +13,23 @@ body {
 }
 
 .clock {
-    width: 320px;
-    height: 320px;
-    border: 10px solid #fff;
-    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background: url("clock.png") no-repeat center;
+    background-size: cover;
     position: relative;
-    background: radial-gradient(circle, #222 60%, #000);
 }
 
-/* Common hand style */
-.hand {
+/* All hands */
+#hour, #minute, #second {
     position: absolute;
-    bottom: 50%;
     left: 50%;
+    bottom: 50%;
     transform-origin: bottom center;
     transform: translateX(-50%);
 }
 
-/* Individual hands */
-.hour {
-    width: 6px;
-    height: 80px;
-    background: #fff;
-}
-
-.minute {
-    width: 4px;
-    height: 110px;
-    background: #ccc;
-}
-
-.second {
-    width: 2px;
-    height: 140px;
-    background: red;
-}
-
-/* Center dot */
-.center-dot {
-    width: 14px;
-    height: 14px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/* Adjust sizes if needed */
+#hour   { height: 100px; }
+#minute { height: 140px; }
+#second { height: 170px; }
