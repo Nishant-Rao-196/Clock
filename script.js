@@ -6,7 +6,7 @@ let second =new Date ().getSeconds()
 
 hands[2].style.transform = `rotate(${second*6}deg)`
 hands[1].style.transform = `rotate(${minute*6}deg)`
-hands[2].style.transform = `rotate(${hour*30+minutes*0.5}deg)`
+hands[0].style.transform = `rotate(${hour*30+minutes*0.5}deg)`
 
 
 setInterval(()=>{
@@ -21,3 +21,4 @@ hands[2].style.transform = `rotate(${hour*30+minutes*0.5}deg)`
 
 },990)
     
+
