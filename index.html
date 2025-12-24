@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analog Clock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="parent">
-            <div id="clock">
-                
-                <img src="hand2.png" id="hour" alt="" width="180">
-                <img src="hand2.png" id="minutes" alt="" width="260">
-                <img src="hand2.png" id="second" alt="" width="380">
-            </div>
-    </div>
-    <script src="script.js"></script>
+
+<div class="clock">
+    <div class="hand hour" id="hour"></div>
+    <div class="hand minute" id="minute"></div>
+    <div class="hand second" id="second"></div>
+    <div class="center-dot"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
