@@ -1,27 +1,26 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+#parent{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #111;
 }
 
-.clock {
-    width: 400px;
-    height: 400px;
-    background: url("clock.png") no-repeat center;
+#clock{
+    height: 500px;
+    width: 500px;
+    background: url("img.1.jpg") no-repeat center;
     background-size: cover;
     position: relative;
 }
 
 /* All hands */
-#hour, #minute, #second {
+#hour, #minute, #second{
     position: absolute;
     left: 50%;
     bottom: 50%;
@@ -29,7 +28,13 @@ body {
     transform: translateX(-50%);
 }
 
-/* Adjust sizes if needed */
-#hour   { height: 100px; }
-#minute { height: 140px; }
-#second { height: 170px; }
+/* Different sizes */
+#hour{
+    height: 120px;
+}
+#minute{
+    height: 170px;
+}
+#second{
+    height: 210px;
+}
