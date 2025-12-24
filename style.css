@@ -19,22 +19,24 @@
     position: relative;
 }
 
-/* All hands */
+/* COMMON needle behavior */
 #hour, #minute, #second{
     position: absolute;
     left: 50%;
-    bottom: 50%;
+    top: 50%;
     transform-origin: bottom center;
-    transform: translateX(-50%);
+    transform: translate(-50%, -100%);
 }
 
-/* Different sizes */
+/* DIFFERENT sizes */
 #hour{
     height: 120px;
 }
+
 #minute{
-    height: 170px;
+    height: 180px;
 }
+
 #second{
-    height: 210px;
+    height: 220px;
 }
