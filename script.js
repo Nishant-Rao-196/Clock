@@ -1,16 +1,17 @@
-let hands = document.getElementsByTagName('img')
 
-let hour = new Date ().getHours()
-let minute = new Date ().getMinutes()
-let second =new Date ().getSeconds()
+let hands = document.getElementsByTagName('img');
 
-hands[2].style.transform = `rotate(${second*6}deg)`
-hands[1].style.transform = `rotate(${minute*6}deg)`
-hands[0].style.transform = `rotate(${hour*30+minutes*0.5}deg)`
+let hour = new Date().getHours();
+let minute = new Date().getMinutes();
+let second = new Date().getSeconds();
 
 
-setInterval(()=>{
- second++;
+hands[2].style.transform = `rotate(${second * 6}deg)`;
+hands[1].style.transform = `rotate(${minute * 6}deg)`;
+hands[0].style.transform = `rotate(${hour * 30 + minute * 0.5}deg)`;
+
+setInterval(() => {
+    second++;
 
     if (second === 60) {
         second = 0;
@@ -22,13 +23,13 @@ setInterval(()=>{
         hour++;
     }
 
-hands[2].style.transform = `rotate(${second*6}deg)`
-hands[1].style.transform = `rotate(${minute*6}deg)`
-hands[0].style.transform = `rotate(${hour*30+minutes*0.5}deg)`
+    if (hour === 12) {
+        hour = 0;
+    }
 
+    hands[2].style.transform = `rotate(${second * 6}deg)`;
+    hands[1].style.transform = `rotate(${minute * 6}deg)`;
+    hands[0].style.transform = `rotate(${hour * 30 + minute * 0.5}deg)`;
 
-},990)
-    
-
-
+}, 1000);
 
