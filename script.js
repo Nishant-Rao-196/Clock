@@ -1,35 +1,25 @@
+const hourHand = document.getElementById("hour");
+const minuteHand = document.getElementById("minute");
+const secondHand = document.getElementById("second");
 
-let hands = document.getElementsByTagName('img');
+function updateClock() {
+    const now = new Date();
 
-let hour = new Date().getHours();
-let minute = new Date().getMinutes();
-let second = new Date().getSeconds();
+    const second = now.getSeconds();
+    const minute = now.getMinutes();
+    const hour = now.getHours() % 12;
 
+    const secondDeg = second * 6;
+    const minuteDeg = minute * 6 + second * 0.1;
+    const hourDeg = hour * 30 + minute * 0.5;
 
-hands[2].style.transform = `rotate(${second * 6}deg)`;
-hands[1].style.transform = `rotate(${minute * 6}deg)`;
-hands[0].style.transform = `rotate(${hour * 30 + minute * 0.5}deg)`;
+    hourHand.style.transform =
+        `translateX(-50%) rotate(${hourDeg}deg)`;
+    minuteHand.style.transform =
+        `translateX(-50%) rotate(${minuteDeg}deg)`;
+    secondHand.style.transform =
+        `translateX(-50%) rotate(${secondDeg}deg)`;
+}
 
-setInterval(() => {
-    second++;
-
-    if (second === 60) {
-        second = 0;
-        minute++;
-    }
-
-    if (minute === 60) {
-        minute = 0;
-        hour++;
-    }
-
-    if (hour === 12) {
-        hour = 0;
-    }
-
-    hands[2].style.transform = `rotate(${second * 6}deg)`;
-    hands[1].style.transform = `rotate(${minute * 6}deg)`;
-    hands[0].style.transform = `rotate(${hour * 30 + minute * 0.5}deg)`;
-
-}, 1000);
-
+setInterval(updateClock, 1000);
+updateClock(); 
