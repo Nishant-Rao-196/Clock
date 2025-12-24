@@ -26,7 +26,10 @@
 }
 #hour,#minutes,#second{
    position: absolute;
+        transform-origin: bottom center;
+
 }
+
 
 
 
