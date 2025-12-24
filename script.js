@@ -2,24 +2,24 @@ const hourHand = document.getElementById("hour");
 const minuteHand = document.getElementById("minute");
 const secondHand = document.getElementById("second");
 
-function updateClock() {
+function runClock() {
     const now = new Date();
 
-    const second = now.getSeconds();
-    const minute = now.getMinutes();
-    const hour = now.getHours() % 12;
+    const sec = now.getSeconds();
+    const min = now.getMinutes();
+    const hr  = now.getHours() % 12;
 
-    const secondDeg = second * 6;
-    const minuteDeg = minute * 6 + second * 0.1;
-    const hourDeg = hour * 30 + minute * 0.5;
+    const secDeg = sec * 6;
+    const minDeg = min * 6 + sec * 0.1;
+    const hrDeg  = hr * 30 + min * 0.5;
 
-    hourHand.style.transform =
-        `translateX(-50%) rotate(${hourDeg}deg)`;
-    minuteHand.style.transform =
-        `translateX(-50%) rotate(${minuteDeg}deg)`;
     secondHand.style.transform =
-        `translateX(-50%) rotate(${secondDeg}deg)`;
+        `translateX(-50%) rotate(${secDeg}deg)`;
+    minuteHand.style.transform =
+        `translateX(-50%) rotate(${minDeg}deg)`;
+    hourHand.style.transform =
+        `translateX(-50%) rotate(${hrDeg}deg)`;
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+setInterval(runClock, 1000);
+runClock();
