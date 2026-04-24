@@ -1,5 +1,5 @@
 const hourHand = document.getElementById("hour");
-const minuteHand = document.getElementById("minute");
+const minuteHand = document.getElementById("minutes");
 const secondHand = document.getElementById("second");
 
 function runClock() {
