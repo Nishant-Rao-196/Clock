@@ -1,21 +1,57 @@
-*{ padding: 0; margin: 0; box-sizing: border-box; 
- } 
-#parent{
-  height: 100vh; 
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-} 
-#clock{
-  height: 500px; 
-  width: 500px; 
-  background: url('img.1.jpg'); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; 
-  display: flex; 
-  align-items: center;
-  justify-content: center; 
-} #hour,#minutes,#second{
-  position: absolute;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+#parent {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clock background */
+#clock {
+    width: 500px;
+    height: 500px;
+    background: url('img.1.jpg') no-repeat center/cover;
+    position: relative;
+    border-radius: 50%;
+}
+
+/* Common hand styling */
+#hour, #minutes, #second {
+    position: absolute;
+
+    top: 10%;
+    left: 50%;
+
+    transform-origin: 50% 100%;
+
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+/* Hour hand */
+#hour {
+    width: 8px;
+    height: 200px;
+    background: black;
+    border-radius: 5px;
+}
+
+/* Minute hand */
+#minutes {
+    width: 5px;
+    height: 200px;
+    background: black;
+    border-radius: 4px;
+}
+
+/* Second hand */
+#second {
+    width: 2px;
+    height: 200px;
+    background: red;
+}
+
